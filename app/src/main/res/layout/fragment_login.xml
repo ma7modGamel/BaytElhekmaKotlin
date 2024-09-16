@@ -1,14 +1,227 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.LoginFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/bgapp"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+        <!--        <TextView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:textSize="28sp"-->
+        <!--            android:textColor="@color/black"-->
+        <!--            android:text="مرحبا بك  "-->
+        <!--            android:layout_margin="28dp"-->
 
-</FrameLayout>
+        <!--            android:textStyle="bold"-->
+        <!--            android:layout_height="wrap_content"/>-->
+        <!--        <ImageView-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:id="@+id/loginLogo"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="130dp"-->
+
+        <!--            android:transitionName="Logo" />-->
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:lineSpacingExtra="7sp"
+
+            android:text="البريد الإلكترونى"
+            android:textColor="@color/colorPrimaryDark"
+
+            android:layout_marginVertical="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/emailId"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.951"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginVertical="8dp"
+            android:lineSpacingExtra="7sp"
+            android:text="كلمة المرور"
+
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toTopOf="@+id/passwordId"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.955"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:gravity="center"
+
+            android:text="تسجيل الدخول"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="-1dp" />
+
+
+        <TextView
+            android:id="@+id/forgetTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="نسيت كلمة المرور ؟"
+
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.053"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordId" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginVertical="32dp"
+            android:layout_marginTop="52dp"
+            android:background="@drawable/btnripple_effect"
+            android:text="دخول"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:cornerRadius="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/forgetTxt"
+            app:layout_constraintVertical_bias="0.0" />
+
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--            android:layout_width="32dp"-->
+<!--            android:layout_height="32dp"-->
+<!--            android:layout_margin="8dp"-->
+
+<!--            android:layout_marginStart="189dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:src="@drawable/face"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/logiGoogle"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="1.0"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/logiGoogle" />-->
+
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--            android:id="@+id/logiGoogle"-->
+<!--            android:layout_width="32dp"-->
+<!--            android:layout_height="32dp"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:background="@color/white"-->
+<!--            android:src="@drawable/google"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/new_account"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.638"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/login"-->
+<!--            app:layout_constraintVertical_bias="0.289" />-->
+
+
+        <TextView
+            android:id="@+id/new_account"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="52dp"
+            android:gravity="center_vertical"
+            android:text="إنشاء حساب جديد"
+
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login"
+            app:layout_constraintVertical_bias="0.216" />
+
+        <EditText
+            android:id="@+id/passwordId"
+            android:layout_width="match_parent"
+
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            android:layout_marginTop="44dp"
+            android:background="@drawable/etcolor"
+            android:gravity="center_vertical"
+            android:hint="كلمة المرور"
+            android:inputType="textPassword"
+
+            android:paddingStart="16dp"
+            android:paddingEnd="12dp"
+            android:text=""
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailId"
+            app:layout_constraintVertical_bias="0.11" />
+
+        <EditText
+            android:id="@+id/emailId"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="16dp"
+
+            android:layout_marginVertical="8dp"
+
+            android:background="@drawable/etcolor"
+
+            android:gravity="center_vertical"
+            android:hint="xx@xx.com"
+            android:inputType="textEmailAddress"
+            android:paddingStart="16dp"
+            android:paddingEnd="12dp"
+
+            android:text=""
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.054"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="  ليس لديك حساب  "
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.11"
+            app:layout_constraintStart_toEndOf="@+id/new_account"
+            app:layout_constraintTop_toTopOf="@+id/new_account" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

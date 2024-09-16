@@ -81,6 +81,9 @@ dependencies {
     implementation (libs.androidx.lifecycle.runtime.ktx)
 
 
+    implementation (libs.circleimageview)
+
+
 }
 kapt {
     correctErrorTypes= true
